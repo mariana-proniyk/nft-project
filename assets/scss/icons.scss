@@ -1,0 +1,96 @@
+$icons-font: "icons";
+
+@font-face {
+    font-family: $icons-font;
+    src: url("../../public/fonts/icons/icons.ttf?5a4e59489b4355d1972f164bc21e6bed") format("truetype"),
+url("../../public/fonts/icons/icons.woff?5a4e59489b4355d1972f164bc21e6bed") format("woff"),
+url("../../public/fonts/icons/icons.woff2?5a4e59489b4355d1972f164bc21e6bed") format("woff2"),
+url("../../public/fonts/icons/icons.svg?5a4e59489b4355d1972f164bc21e6bed#icons") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icons-map: (
+    "arrow-right": "\f101",
+    "camera": "\f102",
+    "copy": "\f103",
+    "criss-cross": "\f104",
+    "discord-logo": "\f105",
+    "email": "\f106",
+    "envelope-simple": "\f107",
+    "eye": "\f108",
+    "globe": "\f109",
+    "instagram-logo": "\f10a",
+    "lock-key": "\f10b",
+    "plus": "\f10c",
+    "rocket-border": "\f10d",
+    "rocket": "\f10e",
+    "search": "\f10f",
+    "twitter-logo": "\f110",
+    "user": "\f111",
+    "youtube-logo": "\f112",
+);
+
+.icon-arrow-right:before {
+    content: map-get($icons-map, "arrow-right");
+}
+.icon-camera:before {
+    content: map-get($icons-map, "camera");
+}
+.icon-copy:before {
+    content: map-get($icons-map, "copy");
+}
+.icon-criss-cross:before {
+    content: map-get($icons-map, "criss-cross");
+}
+.icon-discord-logo:before {
+    content: map-get($icons-map, "discord-logo");
+}
+.icon-email:before {
+    content: map-get($icons-map, "email");
+}
+.icon-envelope-simple:before {
+    content: map-get($icons-map, "envelope-simple");
+}
+.icon-eye:before {
+    content: map-get($icons-map, "eye");
+}
+.icon-globe:before {
+    content: map-get($icons-map, "globe");
+}
+.icon-instagram-logo:before {
+    content: map-get($icons-map, "instagram-logo");
+}
+.icon-lock-key:before {
+    content: map-get($icons-map, "lock-key");
+}
+.icon-plus:before {
+    content: map-get($icons-map, "plus");
+}
+.icon-rocket-border:before {
+    content: map-get($icons-map, "rocket-border");
+}
+.icon-rocket:before {
+    content: map-get($icons-map, "rocket");
+}
+.icon-search:before {
+    content: map-get($icons-map, "search");
+}
+.icon-twitter-logo:before {
+    content: map-get($icons-map, "twitter-logo");
+}
+.icon-user:before {
+    content: map-get($icons-map, "user");
+}
+.icon-youtube-logo:before {
+    content: map-get($icons-map, "youtube-logo");
+}
