@@ -1,0 +1,31 @@
+include components/index.pug
+
+doctype html
+html(lang="en")
+    +Head('Account page')
+    body 
+        include parts/header.pug
+        section.account 
+            img.hero-img(src="./public/images/mashroom.png", alt="")
+            .create-form 
+                h2 Create account
+                .sub-title Welcome! Enter Your Details And Start Creating, Collecting And Selling NFTs.
+                form.form 
+                    .form-item
+                        .input-wrapper
+                            i.icon-user
+                            input(type="text" name="name" placeholder="Username" )  
+                    .form-item 
+                        .input-wrapper
+                            i.icon-email
+                            input(type="text" name="email" placeholder="Email Address")       
+                    .form-item 
+                        .input-wrapper
+                            i.icon-lock-key 
+                            input(type="password" class="password-value" name="password" placeholder="Password")     
+                    .form-item 
+                        .input-wrapper
+                            i.icon-lock-key
+                            input(type="password" name="confirm" placeholder="Confirm Password")    
+                    +Button("Create account", "is-primary" )
+        include parts/footer.pug

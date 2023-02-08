@@ -1,0 +1,31 @@
+include components/index.pug
+
+doctype html
+html(lang="en")
+    head
+        +Head('Marketplace page')
+    body 
+        include parts/header.pug
+        section.marketplace.content-center 
+            .search-section   
+                h2 Browse Marketplace
+                .sub-title Browse through more than 50k NFTs on the NFT Marketplace.
+                .search
+                    input(type="text" placeholder="Search your favourite NFTs")
+                    i.icon-search
+        section.tabs-section 
+            .tab-block 
+                ul.tabs-menu.content-center 
+                    li(class="is-active" data-id-tab="nft-card") NFTs 
+                        span 302
+                    li( data-id-tab="collection") Collection
+                        span 67
+                .tab-content.nft-card.is-open
+                    .wrap.content-center 
+                        - for (var x = 0; x < 12; x++)
+                            include parts/discower-card.pug
+                .tab-content.collection 
+                    .wrap.content-center 
+                        - for (var x = 0; x < 3; x++)
+                            include parts/discower-card.pug
+        include parts/footer.pug

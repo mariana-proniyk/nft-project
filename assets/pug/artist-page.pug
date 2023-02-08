@@ -1,0 +1,59 @@
+include components/index.pug
+
+doctype html
+html(lang="en")
+    +Head('Artist page')
+    body 
+        include parts/header.pug
+        section.placeholder 
+            img.hero-img(src="./public/images/mashroom.png", alt="")
+            .avatar 
+                img(src="./public/images/avatar-placeholder.png", alt="")
+        section.info-artist.content-center 
+            .wrap-info 
+                h2 Animakid
+                .additional-info 
+                        .item 
+                            .numbers.custom-zero 250k+ 
+                            .total.sale Volume
+                        .item 
+                            .numbers.custom-zero 50k+ 
+                            .total.sale NFTs Sold
+                        .item 
+                            .numbers.custom-zero 3000k+ 
+                            .total.sale Followers
+                h5 Bio 
+                .sub-title The internet's friendliest designer kid.
+                .web-links 
+                    h5 Links
+                    .networks 
+                        i.icon-discord-logo
+                        i.icon-youtube-logo
+                        i.icon-twitter-logo
+                        i.icon-instagram-logo
+            .buttons 
+                +Button("0xc0E3...B79C", "is-primary", "icon-copy" )
+                +Button("Follow", "is-transparent", "icon-plus" )
+        section.tabs-section
+            .tab-block
+                ul.tabs-menu.content-center 
+                    li(class="is-active" data-id-tab="created") Created 
+                        span 302
+                    li( data-id-tab="owned") Owned
+                        span 67
+                    li( data-id-tab="collection") Collection
+                        span 4
+                .tab-content.created.is-open
+                    .wrap.content-center 
+                        - for (var x = 0; x < 9; x++)
+                            include parts/discower-card.pug
+                .tab-content.owned 
+                    .wrap.content-center 
+                        - for (var x = 0; x < 6; x++)
+                            include parts/discower-card.pug
+                .tab-content.collection 
+                    .wrap.content-center 
+                        - for (var x = 0; x < 3; x++)
+                            include parts/discower-card.pug
+            
+        include parts/footer.pug

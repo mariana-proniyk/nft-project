@@ -1,0 +1,16 @@
+include components/index.pug
+
+doctype html
+html(lang="en")
+    +Head('Connect page')
+    body 
+        include parts/header.pug
+        section.connect-wallet 
+            img.hero-img(src="./public/images/mashroom.png", alt="")
+            .wallet 
+                h2 Connect wallet
+                p Choose a wallet you want to connect. There are several wallet providers.
+                .options 
+                    - for (let x = 0; x < 3; x++)
+                        include parts/connect-item.pug
+        include parts/footer.pug

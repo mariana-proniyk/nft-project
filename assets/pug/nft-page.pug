@@ -1,0 +1,63 @@
+include components/index.pug
+
+doctype html
+html(lang="en")
+    +Head('NFT page')
+    body 
+        include parts/header.pug
+        section.hero-nft 
+            img.hero-img(src="./public/images/mashroom.png", alt="")
+            .info-center.content-center 
+                .content 
+                    h2 The Orbitians
+                    .date Minted on Sep 30, 2022
+                    .created 
+                        .text Created By
+                        .user 
+                            img(src="./public/images/avatar.png", alt="")
+                            .name Orbitian
+                    .description 
+                        h5 Description
+                        p The Orbitians is a collection of 10,000 unique NFTs on the Ethereum blockchain.
+                        p There are all sorts of beings in the NFT Universe. The most advanced and friendly of the bunch are Orbitians. 
+                        p  They live in a metal space machines, high up in the sky and only have one foot on Earth. These Orbitians are a peaceful race, but they have been at war with a group of invaders for many generations. The invaders are called Upside-Downs, because of their inverted bodies that live on the ground, yet do not know any other way to be. Upside-Downs believe that they will be able to win this war if they could only get an eye into Orbitian territory, so they've taken to make human beings their target.
+                    .details 
+                        h5 Details
+                        .website-link   
+                            i.icon-globe
+                            a(href="#") View on Etherscan
+                        .website-link   
+                            i.icon-globe
+                            a(href="#") View Original
+                    .tags 
+                        h5 Tags
+                        ul  
+                            li Animation
+                            li Illustration
+                            li Moon
+                            li Moon
+                .timer 
+                    .message Auction ends in:
+                    #clockdiv
+                        .wrap-content 
+                            .number 
+                                span.hours 
+                                .smalltext Hours
+                            .point :
+                            .number 
+                                span.minutes 
+                                .smalltext Minutes
+                            .point :
+                            .number 
+                                span.seconds 
+                                .smalltext Seconds
+                        +Button("Place Bid", "is-primary")
+        section.about-artist.content-center 
+            .headline 
+                h3 More from this artist
+                +Button("Go To Artist Page", "is-transparent", "icon-arrow-right")  
+            .wrap 
+                - for (let x = 0; x < 9; x++)
+                    include parts/discower-card.pug
+
+        include parts/footer.pug

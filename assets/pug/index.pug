@@ -1,0 +1,96 @@
+include components/index.pug
+
+doctype html
+html(lang='en')
+    +Head('Home page')
+    body
+        include parts/header.pug
+        section.home-hero.content-center 
+            .hero-frame 
+                h1 Discover Digital Art & Collect NFTs
+                p NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
+                +Button("Get Started", "is-primary", "icon-rocket")  
+                    
+                .additional-info 
+                    .item 
+                        .numbers.custom-zero 240k+ 
+                        .total-sale Total Sale
+                    .item 
+                        .numbers.custom-zero 100k+ 
+                        .total-sale Auctions
+                    .item 
+                        .numbers.custom-zero 240k+ 
+                        .total-sale Artists
+            .hero-img 
+                img.main-img(src="./public/images/home-hero/home-hero-img.png", alt="")
+                .sub-title 
+                    h3 Space Walking
+                    .user 
+                        img(src="./public/images/avatar.png", alt="")
+                        .name Animakid
+        section.trending-collection.content-center  
+            h3 Trending Collection
+            .sub-title Checkout our weekly updated trending collection.
+            .list
+             - for (let x = 0; x < 3; x++)
+                include parts/collection-card.pug
+        section.rated-creators.content-center
+            .wrap 
+                .title
+                    h3 Top creators
+                    .sub-title Checkout Top Rated Creators on the NFT Marketplace
+                +Button("View Rankings", "is-transparent", "icon-rocket-border" ) 
+            .cards
+                - for (var x = 0; x < 12; x++)
+                    include parts/creator-card.pug
+        section.browse-categories.content-center   
+            h3 Browse Categories     
+            .cards 
+                - for (var x = 0; x < 8; x++)
+                    include parts/browse-card.pug 
+        section.discowers.content-center
+            .wrap 
+                .title
+                    h3 Discover More NFTs
+                    .sub-title Explore new trending NFTs
+                +Button("See All", "is-transparent", "icon-eye" ) 
+            .cards  
+                 - for (var x = 0; x < 3; x++)
+                    include parts/discower-card.pug
+        section.nft-highlight.content-center
+            .info 
+                .user 
+                    img(src="./public/images/avatar.png", alt="")
+                    .name Shroomie
+                h2 Magic Mashrooms
+                +Button("See NFT", "is-white", "icon-eye" )
+            .timer 
+                .message Auction ends in:
+                #clockdiv
+                    .wrap-content
+                        .number 
+                            span.hours 
+                            .smalltext Hours
+                        .point :
+                        .number 
+                            span.minutes 
+                            .smalltext Minutes
+                        .point :
+                        .number 
+                            span.seconds 
+                            .smalltext Seconds
+        section.example-works.content-center
+            h3 How it works
+            .sub-title Find Out How To Get Started
+            .cards 
+             - for (let x = 0; x < 3; x++)
+                include parts/example-work-card.pug
+        //- section.subscribe.content-center
+        //-     img(src="./public/images/mashroom.png", alt="")
+        //-     .headline-info 
+        //-         h3 Join Our Weekly Digest
+        //-         .sub-title Get exclusive promotions & updates straight to your inbox.
+        //-         .email 
+        //-             input(type="email" placeholder="Enter your email here")
+        //-             +Button("Subscribe", "is-primary", "icon-envelope-simple")
+        //- include parts/footer.pug

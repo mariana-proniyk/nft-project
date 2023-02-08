@@ -1,0 +1,347 @@
+include components/index.pug
+
+doctype html
+html(lang="en")
+    +Head('Rankings page')
+    body 
+        include parts/header.pug
+        section.rankings.content-center 
+            .creators
+                h2 Top Creators
+                .sub-title Check out top ranking NFT artists on the NFT Marketplace.
+        section.tabs-section 
+            .tab-block
+                ul.tabs-menu.content-center
+                    li(class="is-active" data-id-tab="today") Today 
+                    li( data-id-tab="this-week") This Week
+                    li( data-id-tab="this-month") This Month
+                    li( data-id-tab="all-time") All Time
+                .tab-content.today.is-open
+                    table.content-center  
+                        thead  
+                            tr 
+                                th #
+                                th Artist   
+                                th Change
+                                th NFTs Sold
+                                th Volume
+                        tbody 
+                            tr  
+                                td 
+                                    span.number 1 
+                                td 
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Jaydon Ekstrom Bothman
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 2
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 3
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 4
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Davis Franci
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 5
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Livia Rosser
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 6
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Jaydon Ekstrom Bothman
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 7
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Jaydon Ekstrom Bothman
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            
+                .tab-content.this-week 
+                    table.content-center
+                        thead  
+                            tr 
+                                th #
+                                th Artist   
+                                th Change
+                                th NFTs Sold
+                                th Volume
+                        tbody 
+                            tr  
+                                td 
+                                    span.number 1 
+                                td 
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Jaydon Ekstrom Bothman
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 2
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 3
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 4
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 5
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                .tab-content.this-month 
+                    table.content-center
+                        thead  
+                            tr 
+                                th #
+                                th Artist   
+                                th Change
+                                th NFTs Sold
+                                th Volume
+                        tbody 
+                            tr  
+                                td 
+                                    span.number 1 
+                                td 
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Jaydon Ekstrom Bothman
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 2
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 3
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 4
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 5
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 6
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 7
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 8
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 9
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                .tab-content.all-time 
+                    table.content-center
+                        thead  
+                            tr 
+                                th #
+                                th Artist   
+                                th Change
+                                th NFTs Sold
+                                th Volume
+                        tbody 
+                            tr  
+                                td 
+                                    span.number 1 
+                                td 
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Jaydon Ekstrom Bothman
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 2
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 3
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 4
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Ruben Carder
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+                            tr  
+                                td 
+                                    span.number 5
+                                td  
+                                    .user
+                                        img(src="./public/images/trending-collection/avatar.png", alt="")
+                                        span Alfredo Septimus
+                                td 
+                                    span.change +1.41%
+                                td 602
+                                td 12.4 ETH
+            
+        include parts/footer.pug
