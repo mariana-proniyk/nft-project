@@ -1,0 +1,8 @@
+node_modules
+public/css
+public/js
+*.html
+
+package-lock.json
+
+**/.DS_Store
