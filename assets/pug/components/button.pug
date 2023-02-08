@@ -1,0 +1,16 @@
+//- Button types:
+//- is-transparent
+//- is-primary
+//- is-white
+
+//- +Button("View Rankings", "is-transparent", "icon-user")
+//- +Button("Sign Up", "is-primary", "")
+//- +Button("See NFT", "is-white", "")
+
+mixin Button(text, style, icon)
+    button(class=`button ${style}`)
+        if icon
+            i(class=icon)
+        = text
+        
+        
