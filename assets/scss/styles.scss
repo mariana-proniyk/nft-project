@@ -196,6 +196,7 @@ body {
         width: 13px;
         height: 1px;
         margin-top: 5px;
+        transition: all 400ms ease-out;
         &:nth-child(2) {
             width: 18px;
         }
@@ -205,15 +206,15 @@ body {
     }
     &.open {
         .line {
-            transition-duration: 1s;
+            width: 18px !important;
             &:nth-child(1) {
-                transform: rotate(45deg);
+                transform: rotate(45deg) translateX(5px) translateY(5px);
             }
             &:nth-child(2) {
                 opacity: 0;
             }
             &:nth-child(3) {
-                transform: rotate(-45deg);
+                transform: rotate(-45deg) translateX(3px) translateY(-3px);
             }
         }
     }
