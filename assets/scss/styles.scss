@@ -128,6 +128,9 @@ body {
     @include screen("tablet") {
         max-width: 690px;
     }
+    @include screen("mobile") {
+        max-width: 375px;
+    }
 }
 
 .main-header {
@@ -352,6 +355,18 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        flex-direction: column;
+        padding-bottom: 40px;
+        .hero-frame {
+            h1 {
+                font-size: 28px;
+            }
+        }
+        .hero-img {
+            margin-top: 40px;
+        }
+    }
 }
 
 .additional-info {
@@ -458,6 +473,18 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        .sub-title {
+            margin-bottom: 30px;
+        }
+        .list {
+            .collection-card {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 .rated-creators {
     margin-bottom: 160px;
@@ -498,6 +525,21 @@ body {
                     }
                 }
             }
+        }
+    }
+    @include screen("mobile") {
+        margin-bottom: 40px;
+        .wrap {
+            flex-direction: column;
+            margin-bottom: 40px;
+            .button {
+                margin-top: 20px;
+                max-width: 315px;
+                width: 100%;
+            }
+        }
+        .cards {
+            margin-top: 0px;
         }
     }
 }
@@ -599,12 +641,33 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        margin-bottom: 40px;
+        .cards {
+            margin-top: 30px;
+        }
+    }
 }
 .discowers {
     margin-bottom: 80px;
     .cards {
         display: flex;
         justify-content: space-between;
+    }
+    @include screen("mobile") {
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start !important;
+            .button {
+                margin-top: 20px;
+                max-width: 315px;
+                width: 100%;
+            }
+        }
+        .cards {
+            flex-wrap: wrap;
+        }
     }
 }
 
@@ -651,6 +714,9 @@ body {
             display: none;
         }
     }
+    @include screen("mobile") {
+        margin-bottom: 20px;
+    }
 }
 
 .nft-highlight {
@@ -690,6 +756,23 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        padding: 120px 30px 40px 30px;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 40px;
+        .info {
+            .button {
+                margin-bottom: 30px;
+                max-width: 315px;
+                width: 100%;
+            }
+        }
+        .timer {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 .example-works {
     margin-bottom: 80px;
@@ -721,6 +804,33 @@ body {
                 }
                 p {
                     font-size: 12px;
+                }
+            }
+        }
+    }
+    @include screen("mobile") {
+        .sub-title {
+            margin-bottom: 40px;
+        }
+        .cards {
+            flex-wrap: wrap;
+            .example-work-card {
+                display: flex;
+                flex-direction: row;
+                max-width: 315px;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .text {
+                    text-align: left;
+                    margin-left: 10px;
+                    h5 {
+                        width: 155px;
+                    }
                 }
             }
         }
@@ -757,6 +867,13 @@ body {
         .headline-info {
             max-width: 300px;
             width: 100%;
+        }
+    }
+    @include screen("mobile") {
+        flex-direction: column;
+        background-color: transparent;
+        .headline-info {
+            margin-top: 20px;
         }
     }
 }
@@ -869,6 +986,11 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        .wrap {
+            margin-left: 0px;
+        }
+    }
 }
 
 .networks {
@@ -935,6 +1057,15 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        flex-direction: column;
+        .hero-img {
+            width: 100%;
+        }
+        .wallet {
+            padding: 30px;
+        }
+    }
 }
 .placeholder {
     position: relative;
@@ -951,6 +1082,11 @@ body {
         img {
             height: 120px;
             width: 120px;
+        }
+    }
+    @include screen("mobile") {
+        .avatar {
+            left: 35%;
         }
     }
 }
@@ -1006,6 +1142,25 @@ body {
             align-items: flex-end;
         }
     }
+    @include screen("mobile") {
+        margin-top: 70px;
+        flex-direction: column;
+        .buttons {
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            .button {
+                &.is-transparent,
+                &.is-primary {
+                    max-width: 315px;
+                }
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
 }
 
 .tabs-section {
@@ -1042,6 +1197,9 @@ body {
                     background: #3b3b3b;
                     border-radius: 20px;
                     margin-left: 16px;
+                    @include screen("mobile") {
+                        display: none;
+                    }
                 }
                 &.is-active {
                     color: $mainColor;
@@ -1066,6 +1224,9 @@ body {
         }
         @include screen("tablet") {
             background: #3b3b3b;
+        }
+        @include screen("mobile") {
+            padding-bottom: 0px;
         }
     }
     .created,
@@ -1199,6 +1360,14 @@ body {
             }
         }
     }
+    @include screen("mobile") {
+        .info-center {
+            flex-direction: column-reverse;
+            .timer {
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 .about-artist {
     padding-top: 80px;
@@ -1219,6 +1388,31 @@ body {
         flex-wrap: wrap;
         .discower-card {
             margin-bottom: 60px;
+        }
+    }
+    @include screen("mobile") {
+        padding-top: 0px;
+        .headline {
+            flex-direction: column;
+            .button {
+                margin-top: 20px;
+                max-width: 315px;
+            }
+        }
+        .wrap {
+            .discower-card {
+                img {
+                    width: 100%;
+                }
+                .info {
+                    .user {
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1292,6 +1486,17 @@ body {
             margin-top: 80px;
         }
     }
+    @include screen("mobile") {
+        flex-direction: column;
+        .hero-img {
+            width: 100%;
+        }
+        .create-form {
+            padding: 30px;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+    }
 }
 .marketplace {
     margin-top: 80px;
@@ -1333,6 +1538,11 @@ body {
     }
     @include screen("tablet") {
         max-width: 690px;
+    }
+    @include screen("mobile") {
+        h2 {
+            font-size: 28px;
+        }
     }
 }
 .rankings {
@@ -1397,6 +1607,33 @@ body {
                                 width: 40px;
                                 height: 40px;
                                 object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+            @include screen("mobile") {
+                padding: 0;
+                thead {
+                    tr {
+                        th {
+                            display: none;
+                            &:first-child,
+                            &:last-child,
+                            &:nth-child(2) {
+                                display: table-cell;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            display: none;
+                            &:first-child,
+                            &:last-child,
+                            &:nth-child(2) {
+                                display: table-cell;
                             }
                         }
                     }
