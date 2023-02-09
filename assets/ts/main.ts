@@ -122,3 +122,13 @@ $(".account form").validate({
         },
     },
 });
+
+$(".hamburger").on("click", function () {
+    // $(this).toggleClass('is-open');
+    $(".mobile-menu").toggleClass("is-active");
+    $("body").addClass("block-scroll");
+});
+
+$(".hamburger").on("click", function () {
+    $(this).toggleClass("open");
+});
