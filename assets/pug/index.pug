@@ -85,12 +85,13 @@ html(lang='en')
             .cards 
              - for (let x = 0; x < 3; x++)
                 include parts/example-work-card.pug
-        //- section.subscribe.content-center
-        //-     img(src="./public/images/mashroom.png", alt="")
-        //-     .headline-info 
-        //-         h3 Join Our Weekly Digest
-        //-         .sub-title Get exclusive promotions & updates straight to your inbox.
-        //-         .email 
-        //-             input(type="email" placeholder="Enter your email here")
-        //-             +Button("Subscribe", "is-primary", "icon-envelope-simple")
-        //- include parts/footer.pug
+        section.subscribe.content-center
+            img(src="./public/images/mashroom.png", alt="")
+            .headline-info 
+                h3 Join Our Weekly Digest
+                .sub-title Get exclusive promotions & updates straight to your inbox.
+                .email 
+                    input(type="email" placeholder="Enter your email here")
+                    +Button("Subscribe", "is-primary", "icon-envelope-simple")
+        include parts/footer.pug
+        include parts/mobile-menu.pug
