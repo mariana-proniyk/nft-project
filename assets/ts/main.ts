@@ -67,7 +67,7 @@ $(".tabs-menu li").on("click", function () {
     $(`.${$(this).data("idTab")}`).addClass("is-open");
 });
 
-$(".main-footer form").validate({
+$(".main-footer form", ".subscribe form").validate({
     errorElement: "div",
     rules: {
         email: {
