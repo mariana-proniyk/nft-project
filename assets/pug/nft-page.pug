@@ -13,9 +13,7 @@ html(lang="en")
                     .date Minted on Sep 30, 2022
                     .created 
                         .text Created By
-                        .user 
-                            img(src="./public/images/avatar.png", alt="")
-                            .name Orbitian
+                        +User('Orbitian') 
                     .description 
                         h5 Description
                         p The Orbitians is a collection of 10,000 unique NFTs on the Ethereum blockchain.
@@ -53,10 +51,10 @@ html(lang="en")
                                 .smalltext Seconds
                         +Button("Place Bid", "is-primary")
         section.about-artist.content-center 
-            .headline 
+            .header-content
                 h3 More from this artist
                 +Button("Go To Artist Page", "is-transparent", "icon-arrow-right")  
-            .wrap 
+            .wrap-content 
                 - for (let x = 0; x < 9; x++)
                     include parts/discower-card.pug
         include parts/footer.pug

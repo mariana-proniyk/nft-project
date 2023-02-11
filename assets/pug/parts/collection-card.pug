@@ -1,5 +1,5 @@
 .collection-card 
-        .wrap 
+        .wrapper 
             img(src="./public/images/trending-collection/primary-photo-placeholder.png", alt="")
             .wrap-bottom 
                 img(src="./public/images/trending-collection/secondary-photo-placeholder.png", alt="")
@@ -7,6 +7,4 @@
                 .count 1025+ 
         .info
             h5 DSGN Animals
-            .artist
-                img(src="./public/images/trending-collection/avatar.png", alt="")
-                .name MrFox
+            +User('Mr Fox')
